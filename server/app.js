@@ -7,6 +7,9 @@ const {MONGOURL}= require('./keys')
 
 require('./models/user')
 
+app.use(express.json())
+app.use(require('./routes/auth'))
+
 mongoose.connect(MONGOURL,{
     useNewUrlParser:true, useUnifiedTopology:true
 })
