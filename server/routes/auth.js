@@ -6,6 +6,10 @@ const bcrypt = require("bcryptjs");
 const jwt = require('jsonwebtoken')
 const {JWT_SECRET} = require('../keys')
 
+router.get('/proctected',(req,res)=>{
+  res.send("Hello Traveller")
+})
+
 router.post("/signup", (req, res) => {
   const { name, email, password } = req.body;
   if (!email || !password || !name) {
