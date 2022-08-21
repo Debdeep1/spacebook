@@ -9,3 +9,15 @@
 .Container{
     margin: 10vh 0 10vh 30vw;
 }
+
+@media (max-width:450px) {
+    .Container{
+        margin: 3vh 0 5vh 5vw;
+    }
+    .HomeCard{
+        width: 270px;
+    }
+    .HomeCardImg{
+        max-width: 248px;
+    }
+}
