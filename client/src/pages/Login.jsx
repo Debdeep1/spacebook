@@ -6,12 +6,12 @@ function Login() {
   return (
     <Card>
       <Card.Header>
-        <Nav variant="tabs" defaultActiveKey="#first">
+        <Nav variant="pills" defaultActiveKey="#login">
           <Nav.Item>
-            <Nav.Link href="#first">Login</Nav.Link>
+            <Nav.Link href="#login">Login</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="#link">Signup</Nav.Link>
+            <Nav.Link href="/signup">Signup</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="#disabled" disabled>
