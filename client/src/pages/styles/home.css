@@ -1,0 +1,11 @@
+.HomeCardImg{
+    max-width: 480px;
+}
+.HomeCard{
+    padding: 10px;
+    box-shadow: 0 10px 7px 0 rgba(0, 0, 0, 0.2);
+    width: 502px;
+}
+.Container{
+    margin: 10vh 0 10vh 30vw;
+}

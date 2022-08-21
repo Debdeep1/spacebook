@@ -1,12 +1,17 @@
-import React from 'react'
-import NavbarCompo from '../components/NavbarComponent'
-const Home = () => {
+
+import HomeCard from "../components/HomeCard";
+import NavbarCompo from "../components/NavbarComponent";
+
+function Home() {
   return (
-    <>
-            <NavbarCompo/>
-            <div>Home</div>
-    </>
-  )
+    <div className="HomeContainer">
+      <NavbarCompo />
+      <section>
+        <HomeCard/>
+        <HomeCard/>
+      </section>
+    </div>
+  );
 }
 
-export default Home
+export default Home;
