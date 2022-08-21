@@ -20,8 +20,8 @@ function NavbarCompo() {
                 Sign Up
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Search
+              <NavDropdown.Item href="/create">
+                Create Post
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
