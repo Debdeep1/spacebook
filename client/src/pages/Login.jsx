@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
+import "./styles/login.css"
 
 function Login() {
   return (
@@ -21,7 +22,7 @@ function Login() {
         </Nav>
       </Card.Header>
       <Card.Body>
-        <Card.Title>SpaceBook</Card.Title>
+        <Card.Title className='Logo'>SpaceBook</Card.Title>
         <Card.Text>
           Welcome Back Traveller!
         </Card.Text>

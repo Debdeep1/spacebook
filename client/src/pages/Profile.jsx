@@ -1,8 +1,13 @@
 import React from 'react'
+import NavbarCompo from '../components/NavbarComponent'
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <>
+    <NavbarCompo/>
+      <div>Profile</div>
+    </>
+    
   )
 }
 

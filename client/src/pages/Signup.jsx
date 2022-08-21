@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
-
+import "./styles/signup.css"
 function Signup() {
   return (
     <Card>
@@ -18,7 +18,7 @@ function Signup() {
         </Nav>
       </Card.Header>
       <Card.Body>
-        <Card.Title>SpaceBook</Card.Title>
+        <Card.Title className='Logo'>SpaceBook</Card.Title>
         <Card.Text>
           Welcome Traveller!
         </Card.Text>
