@@ -4,15 +4,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import NavbarCompo from './NavbarComponent';
 const CreatePost = () => {
   return (
+    <>
+    <NavbarCompo />
     <div className='PostCard'>
-    <button className='createPostBtn'><input type="file" placeholder='file'/></button>
-      <input type="text" placeholder='title' />
-      <input type="text" placeholder='body' />
-      
-      <button className='createPostBtn'>Post</button>
+    <div><button className='createPostBtn'><input type="file" placeholder='file'/></button></div>
+    <div><input className='postTitle' type="text" placeholder='title' /></div>
+    <div><textarea className="postCaption" placeholder='body' /></div>
+    <div><button className='createPostBtn'>Create Post</button></div>
     </div>
+    </>
   )
 }
 

@@ -1,16 +1,38 @@
+.PostCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+    margin: 10vh 25vw;
+    width: 50vw;
+    border-radius: 44px;
+background: #e0e0e0;
+box-shadow: inset -20px 20px 40px #b1b1b1,
+            inset 20px -20px 40px #ffffff;
+}
+.postCaption{
+    width: 22vw;
+    height: 20vh;
+    font-size: 18px;
+}
+.postTitle{
+    height: 6vh;
+    font-size: 28px;    
+}
 .createPostBtn{
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    margin: 18px 0;
+    margin: 18px 45px;
     color: #000000;
     text-decoration: none !important;
     text-transform: uppercase;
     transition: 0.5s;
-    letter-spacing: 4px;
     overflow: hidden;
     margin-right: 50px;
     border-radius: 8px;
+    width: 22vw;
 }
 .createPostBtn:hover{
     background: #6737d6;
@@ -23,4 +45,82 @@
 }
 .createPostBtn:nth-child(3){
     filter: hue-rotate(90deg);
+}
+
+/*media query*/
+
+@media screen and (min-device-width: 770px) and (max-device-width: 1030px){
+    .postTitle{
+        width: 42vw;
+        font-size: 18px;
+    }
+    .createPostBtn{
+        position: relative;
+        display: inline-block;
+        padding: 6px 4px;
+        margin: 38px 7px;
+        font-size: 20px;
+        margin-right: 0;
+        border-radius: 8px;
+        width: 47vw;
+    }
+    .PostCard{
+        height: 70vh;
+        margin: 8vh 17vw;
+        width: 70vw;
+    }
+    .postCaption{
+        width: 42vw;
+    }   
+}
+
+@media screen and (min-device-width: 431px) and (max-device-width: 768px){
+    .postTitle{
+        width: 42vw;
+        font-size: 18px;
+    }
+    .createPostBtn{
+        position: relative;
+        display: inline-block;
+        padding: 6px 4px;
+        margin: 38px 7px;
+        font-size: 20px;
+        margin-right: 0;
+        border-radius: 8px;
+        width: 47vw;
+    }
+    .PostCard{
+        height: 70vh;
+        margin: 8vh 17vw;
+        width: 70vw;
+    }
+    .postCaption{
+        width: 42vw;
+    }
+}
+
+@media (max-width:430px) {
+    .postTitle{
+        height: 5vh;
+        width: 42vw;
+        font-size: 14px;
+    }
+    .createPostBtn{
+        position: relative;
+        display: inline-block;
+        padding: 6px 4px;
+        margin: 38px 7px;
+        font-size: 14px;
+        margin-right: 0;
+        border-radius: 8px;
+        width: 47vw;
+    }
+    .PostCard{
+        height: 70vh;
+        margin: 8vh 17vw;
+        width: 70vw;
+    }
+    .postCaption{
+        width: 42vw;
+    }
 }
