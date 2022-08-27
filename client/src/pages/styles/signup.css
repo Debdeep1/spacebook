@@ -13,6 +13,7 @@ a{
     letter-spacing: 4px;
     overflow: hidden;
     margin-right: 50px;
+    border-radius: 8px;
 }
 a:hover{
     background: #6737d6;
