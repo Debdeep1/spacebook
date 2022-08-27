@@ -11,9 +11,9 @@ const CreatePost = () => {
   const postDetails =()=>{
     const data = new FormData()
     data.append("file",image)
-    data.append("upload_preset","spacebook9")
+    data.append("upload_preset","space123")
     data.append("cloud_name","spacebook9")
-    fetch("https://api.cloudinary.com/v1_1/spacebook/image/upload",{
+    fetch("https://api.cloudinary.com/v1_1/spacebook9/image/upload",{
       method:"post",
       body:data,
     }).then(res=>res.json()).then(data=>{
@@ -28,9 +28,7 @@ const CreatePost = () => {
       <NavbarCompo />
       <div className="PostCard">
         <div>
-          <button className="createPostBtn">
-            <input type="file" placeholder="file" onChange={(e)=>setImage(e.target.files)} />
-          </button>
+            <input className="createPostBtn" type="text" placeholder="Image Link" value={image} onChange={(e)=>setImage(e.target.files)} />
         </div>
         <div>
           <input

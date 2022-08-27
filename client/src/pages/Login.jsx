@@ -24,6 +24,8 @@ function Login() {
     }).then(res=>res.json()).then(data=>{console.log(data); if(data.error){
       alert(data.error);
     } else{
+      localStorage.setItem("jwt",data.token)
+      localStorage.setItem("user",JSON.stringify(data.user))
       navigate(`/`)
       alert("Signed In Successfully!")
     }}).catch(err=>{
