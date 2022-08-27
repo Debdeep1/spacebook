@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 .HomeCardImg{
     max-width: 480px;
 }
@@ -5,6 +6,11 @@
     padding: 10px;
     box-shadow: 0 10px 7px 0 rgba(0, 0, 0, 0.2);
     width: 502px;
+}
+.HomeCard h5{
+    font-family: 'Michroma', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 .Container{
     margin: 10vh 0 10vh 30vw;

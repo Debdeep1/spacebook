@@ -27,7 +27,10 @@ function Signup() {
       alert(data.error); return;
     } else{
       navigate(`/login`)
-    } console.log(data)})
+      alert("User Registered!");
+    } console.log(data)}).catch(err=>{
+      console.log(err)
+    })
   }
   return (
     <Card>
