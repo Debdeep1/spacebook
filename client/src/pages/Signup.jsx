@@ -1,25 +1,34 @@
 import { useState } from 'react';
+import {useNavigate} from "react-router-dom"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
 import "./styles/signup.css"
 function Signup() {
 
+  const navigate = useNavigate()
   const [name,setName]= useState("")
   const [password,setPassword]= useState("")
   const [email,setEmail]= useState("")
   const PostData =()=>{
-    fetch("http://localhost:5000/signup",{
+    if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+      alert("Invalid email!")
+      return
+    }
+    fetch("/signup",{
       method:"post",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify({
-        name:"",
-        password:"",
-        email:"",
+        name,
+        password,
+        email,
       })
-    }).then(res=>res.json()).then(data=>{console.log(data)})
+    }).then(res=>res.json()).then(data=>{if(data.error){
+      alert(data.error); return;
+    } else{
+      navigate(`/login`)
+    } console.log(data)})
   }
-  //5:51
   return (
     <Card>
       <Card.Header>
@@ -45,6 +54,7 @@ function Signup() {
           <input type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
         </Card.Text>
         <Button href="/login" variant="primary">Already have an account?</Button>
+        <Button onClick={()=>PostData()} variant="success">Sign Up</Button>
       </Card.Body>
     </Card>
   );
