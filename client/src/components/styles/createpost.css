@@ -1,7 +1,4 @@
-.Logo{
-    font-family: 'Kanit', sans-serif;
-}
-.NavItemLinks{
+.createPostBtn{
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -15,15 +12,15 @@
     margin-right: 50px;
     border-radius: 8px;
 }
-.NavItemLinks:hover{
+.createPostBtn:hover{
     background: #6737d6;
     color: #fcfcfc;
     box-shadow: 0 0 5px #3f03f4, 0 0 25px #031ff4, 0 0  50px #03e9f4, 0 0 200px #03e9f4;
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
-.NavItemLinks:nth-child(1){
+.createPostBtn:nth-child(1){
     filter: hue-rotate(270deg);
 }
-.NavItemLinks:nth-child(3){
+.createPostBtn:nth-child(3){
     filter: hue-rotate(90deg);
 }

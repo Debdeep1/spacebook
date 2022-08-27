@@ -1,4 +1,5 @@
 import React from 'react'
+import "./styles/createpost.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -6,10 +7,11 @@ import {
 const CreatePost = () => {
   return (
     <div className='PostCard'>
+    <button className='createPostBtn'><input type="file" placeholder='file'/></button>
       <input type="text" placeholder='title' />
       <input type="text" placeholder='body' />
-      <input type="file" placeholder='file'/>
-      <button>Post</button>
+      
+      <button className='createPostBtn'>Post</button>
     </div>
   )
 }

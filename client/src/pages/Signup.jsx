@@ -25,17 +25,17 @@ function Signup() {
       <Card.Header>
         <Nav variant="pills" defaultActiveKey="#signup">
           <Nav.Item>
-            <a target="_blank" href="#signup">Signup</a>
+            <Nav.Link className="NavItemLinks" target="_blank" href="#signup">Signup</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <a target="_blank" href="#disabled" disabled>
+            <Nav.Link className="NavItemLinks" target="_blank" href="#disabled" disabled>
               Disabled
-            </a>
+            </Nav.Link>
           </Nav.Item>
         </Nav>
       </Card.Header>
       <Card.Body>
-        <Card.Title className='Logo'>SpaceBook</Card.Title>
+        <Card.Title className='Logo NavItemLinks'>SpaceBook</Card.Title>
         <Card.Text>
           Welcome Traveller!
         </Card.Text>
