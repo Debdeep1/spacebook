@@ -3,20 +3,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import "./styles/navbar.css"
-import { useContext } from 'react';
-import { UserContext } from '../App';
-
 
 function NavbarCompo() {
-  const {state,dispatch}=useContext(UserContext)
-  const renderList = ()=>{
-    if(state){
-      return []
-    }
-    else{
-
-    }
-  }
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
