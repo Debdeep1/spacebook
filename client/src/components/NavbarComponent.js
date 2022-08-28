@@ -9,6 +9,14 @@ import { UserContext } from '../App';
 
 function NavbarCompo() {
   const {state,dispatch}=useContext(UserContext)
+  const renderList = ()=>{
+    if(state){
+      return []
+    }
+    else{
+
+    }
+  }
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
