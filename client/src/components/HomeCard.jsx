@@ -1,24 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../pages/styles/home.css";
-import { useSpring, animated } from 'react-spring'
+import { useSpring, animated } from "react-spring";
 
 const HomeCard = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("/allpost", {
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("jwt"),
+      },
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        setData(result.posts);
+      });
+  }, []);
+
   return (
     <div className="Container">
-      <section style={{ width: "18rem" }}>
-        <div className="HomeCard">
-          <h5>Card Title</h5>
-          <img
-            className="HomeCardImg"
-            src="https://images8.alphacoders.com/380/thumb-1920-380977.jpg"
-          />
-        </div>
-        <div className="CommentSection">
-          <p>this is post.</p>
-          <span className="homeCardBar"></span>
-          <input type="text" placeholder="your thoughts?" />
-        </div>
-      </section>
+      {data.map((item) => {
+        //console.log(item.postedBy.name)
+        return (
+          <section style={{ width: "18rem" }}>
+            <div className="HomeCard" key={item._id}>
+              <h5>{item.postedBy.name}</h5>
+              <img
+                className="HomeCardImg"
+                src={item.url}
+              />
+            </div>
+            <div className="CommentSection">
+              <p>{item.title}</p>
+              <p>{item.body}</p>
+              <span className="homeCardBar"></span>
+              <input type="text" placeholder="your thoughts?" />
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 };

@@ -16,7 +16,7 @@ router.get("/allpost", (req, res) => {
     })
 });
 
-router.post("/createpost", requireLogin, (req, res) => {
+router.post("/createpost",requireLogin ,(req, res) => {
   const {title,body,url} = req.body 
   if(!title || !body){
     return  res.status(422).json({error:"Please add all the fields"})
@@ -37,7 +37,7 @@ router.post("/createpost", requireLogin, (req, res) => {
 });
 module.exports = router;
 
-router.get('/mypost',requireLogin,(req,res)=>{
+router.get('/mypost',(req,res)=>{
   Post.find({postedBy:req.user._id})
   .populate("PostedBy","_id name")
   .then(mypost=>{

@@ -8,7 +8,6 @@ function Home() {
       <NavbarCompo />
       <section>
         <HomeCard/>
-        <HomeCard/>
       </section>
     </div>
   );

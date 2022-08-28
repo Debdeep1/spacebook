@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 .HomeCardImg{
-    max-width: 480px;
+    max-width: 100%;
 }
 .HomeCard{
     padding: 10px;
     box-shadow: 0 10px 7px 0 rgba(0, 0, 0, 0.2);
-    width: 502px;
+    width: 70vw;
 }
 .HomeCard h5{
     font-family: 'Michroma', sans-serif;
@@ -13,7 +13,7 @@
     text-transform: uppercase;
 }
 .Container{
-    margin: 10vh 0 10vh 30vw;
+    margin: 10vh 10vw 10vh 17vw;
 }
 
 @media (max-width:450px) {
@@ -21,9 +21,31 @@
         margin: 3vh 0 5vh 5vw;
     }
     .HomeCard{
-        width: 270px;
+        width: 90vw;
     }
     .HomeCardImg{
-        max-width: 248px;
+        max-width: 100%;
     }
+}
+@media screen and (min-device-width: 431px) and (max-device-width: 768px){
+    .Container{
+        margin: 3vh 0 5vh 5vw;
+    }
+    .HomeCard{
+        width: 80vw;
+    }
+    .HomeCardImg{
+        max-width: 100%;
+    }   
+}
+@media screen and (min-device-width: 769px) and (max-device-width: 1024px){
+    .Container{
+        margin: 3vh 0 5vh 5vw;
+    }
+    .HomeCard{
+        width: 80vw;
+    }
+    .HomeCardImg{
+        max-width: 100%;
+    }   
 }
