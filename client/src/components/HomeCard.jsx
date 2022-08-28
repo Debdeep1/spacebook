@@ -8,11 +8,13 @@ const HomeCard = () => {
     fetch("/allpost", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
+        "Content-Type":"application/json"
       },
     })
       .then((res) => res.json())
       .then((result) => {
         setData(result.posts);
+        console.log(localStorage.getItem("jwt"))
       });
   }, []);
 

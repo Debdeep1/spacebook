@@ -5,7 +5,6 @@ const PORT = 5000
 const {MONGOURL}= require('./keys')
 
 
-
 mongoose.connect(MONGOURL,{
     useNewUrlParser:true, useUnifiedTopology:true
 })
