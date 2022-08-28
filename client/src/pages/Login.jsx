@@ -2,10 +2,15 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
 import "./styles/login.css"
-import { useState } from 'react';
+import { useState, useContext,} from 'react';
+import {UserContext} from "../App"
 import {useNavigate} from "react-router-dom"
 
+
 function Login() {
+
+  const {state,dispatch} = useContext(UserContext)
+
   const navigate = useNavigate()
   const [password,setPassword]= useState("")
   const [email,setEmail]= useState("")
@@ -26,6 +31,7 @@ function Login() {
     } else{
       localStorage.setItem("jwt",data.token)
       localStorage.setItem("user",JSON.stringify(data.user))
+      dispatch({type:"USER",payload:"data.user"})
       navigate(`/`)
       alert("Signed In Successfully!")
     }}).catch(err=>{

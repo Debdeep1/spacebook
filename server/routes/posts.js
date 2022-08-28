@@ -18,7 +18,7 @@ router.get("/allpost", (req, res) => {
 
 router.post("/createpost", requireLogin, (req, res) => {
   const {title,body,url} = req.body 
-  if(!title || !body || !url){
+  if(!title || !body){
     return  res.status(422).json({error:"Please add all the fields"})
   }
   req.user.password = undefined
