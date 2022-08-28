@@ -3,16 +3,31 @@ import "../pages/styles/home.css";
 import { useSpring, animated } from "react-spring";
 
 const HomeCard = () => {
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //   fetch("/allpost", {
+  //     headers: {
+  //       Authorization: "Bearer " + localStorage.getItem("jwt"),
+  //     },
+  //   })
+  //     .then((res) => res.json())
+  //     .then((result) => {
+  //       setData(result.posts);
+  //     });
+  // }, []);
+
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch("/allpost", {
+      method:"get",
       headers: {
-        Authorization: "Bearer " + localStorage.getItem("jwt"),
+        headers:{"Content-Type":"application/json"},
       },
     })
       .then((res) => res.json())
       .then((result) => {
         setData(result.posts);
+        console.log(result.posts)
       });
   }, []);
 
