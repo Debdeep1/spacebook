@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../pages/styles/home.css";
-import { useSpring, animated } from "react-spring";
+
 
 const HomeCard = () => {
   const [data, setData] = useState([]);
